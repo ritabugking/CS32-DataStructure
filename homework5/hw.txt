@@ -1,0 +1,58 @@
+1a.
+                                   50
+			20			60
+		10		40			70
+		    15	     30			     65     80
+			   25  37 			   73
+
+1b.
+in-order:  10,15,20,25,30,37,40,50,60,65,70,73,80
+pre-order: 50,20,10,15,40,30,25,37,60,70,65,80,73
+post-order:15,10,25,37,30,40,20,65,73,80,70,60,50
+
+1c.
+after delete 30:
+                                   50
+			20			60
+		10		40			70
+		    15	     25			     65     80
+			       37 			   73
+
+after delete 20:
+                                   50
+			15			60
+		10		40			70
+		    	     25			     65     80
+			       37 			   73
+
+2a.
+struct BSTNode{	Node(int value, BSTNode* parent)	: m_value(value), l_child(nullptr), r_child(nullptr), m_parent(parent)	{}	int m_value;	BSTNode* l_child;	BSTNode* r_child;	BSTNode* m_parent;};
+
+2b.
+
+void insert(BSTNode* curr, int value, BSTNode* parent){	insertNode(curr, value, nullptr);}
+void insertNode(BSTNode* curr, int value, BSTNode* parent){	if(curr is nullptr)		create a new BSTNode with the data as the value, the parent pointer being set to parent		and the left and right children to be set as nullptr	else if(curr's value is less than the value passed in)		insertNode(curr's left child, value, curr)	else if(curr's value is greater than the value passed in)		insertNode(curr's right child, value, curr)}
+
+3a.
+		8
+	    3       6
+          0   2    4
+
+3b.
+array index:  0  1  2  3  4  5
+              8  3  6  0  2  4
+
+3c.
+array index:  0  1  2  3  4  
+              6  3  4  0  2
+
+4a. O(C+S)
+4b. O(logC+S)
+4c. O(logC+logS)
+4d. O(logS)
+4e. O(1)
+4f. O(logC+S)
+4g. O(logS)
+4h. O(ClogS)
+
+
